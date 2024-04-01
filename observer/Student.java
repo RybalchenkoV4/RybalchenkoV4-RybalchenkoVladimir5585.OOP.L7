@@ -1,5 +1,7 @@
 package ru.geekbrains.oop.lesson7.observer;
 
+import java.util.Random;
+
 public class Student implements Observer{
 
     private String name;
@@ -11,7 +13,9 @@ public class Student implements Observer{
     }
 
     @Override
-    public void receiveOffer(String nameCompany,Vacancy vacancy, int salary) {
+    public void receiveOffer(String nameCompany,Vacancy vacancy) {
+        Random random = new Random();
+        int salary = random.nextInt(vacancy.getMinSalary(), vacancy.getMaxSalary());
         if (this.salary <= salary){
             System.out.printf("Студент %s: Мне нужна эта работа! (компания: %s; вакансия: %s; заработная плата: %d)\n",
                     name, nameCompany, vacancy, salary);

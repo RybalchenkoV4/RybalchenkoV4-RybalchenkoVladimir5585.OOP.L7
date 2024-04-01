@@ -20,9 +20,9 @@ public class Program {
         Vacancy worker1 = new Vacancy("Worker", 20000, 70000);
         Vacancy freelancer1 = new Vacancy("Freelancer", 50000, 70000);
 
-        Company google = new Company("Google", publisher, worker1);
-        Company yandex = new Company("Yandex", publisher, worker1);
-        Company geekBrains = new Company("GeekBrains", publisher, freelancer1);
+        Company google = new Company("Google", publisher);
+        Company yandex = new Company("Yandex", publisher);
+        Company geekBrains = new Company("GeekBrains", publisher);
 
         Student student1 = new Student("Студент #1");
         Master master1 = new Master("Мастер #1");
@@ -36,7 +36,7 @@ public class Program {
 
         for (int i = 0; i < 1; i++){
             google.needEmployee(worker1);
-            yandex.needEmployee(freelancer1);
+            yandex.needEmployee(worker1);
             geekBrains.needEmployee(freelancer1);
         }
 

@@ -11,7 +11,7 @@ public class JobAgency implements Publisher{
 
     public void sendOffer(String companyName, Vacancy vacancy) {
         for (Observer observer : observers)
-            observer.receiveOffer(companyName, vacancy, random.nextInt(vacancy.getMinSalary(), vacancy.getMaxSalary()));
+            observer.receiveOffer(companyName, vacancy);
     }
 
 

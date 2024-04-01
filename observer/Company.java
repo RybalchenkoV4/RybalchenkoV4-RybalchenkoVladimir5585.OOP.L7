@@ -10,7 +10,7 @@ public class Company {
     private Publisher jobAgency;
 
 
-    public Company(String name, Publisher jobAgency, Vacancy vacancy) {
+    public Company(String name, Publisher jobAgency) {
         this.name = name;
         this.jobAgency = jobAgency;
     }
